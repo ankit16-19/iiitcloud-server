@@ -91,3 +91,10 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
     + 'uid':'userID'
     + 'pwd':'pass@123'
   + Returns JSON object **`{"Notices":[{{"Notices":[{"html":".....html content......"}]}`**
+
+***
+#### Distributed under GNU License.
+#### Copyright © 2017 Ankit Choudhary.
+***
+##### Designed with ♥ at IIIT-Bh.
+##### Documentation by Ravi Teja Gannavarapu ([@iamravitejag](https://github.com/iamravitejag))
