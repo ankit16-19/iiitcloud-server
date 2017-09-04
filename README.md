@@ -68,7 +68,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
     + 'pwd':'pass@123'
     + 'id':'BXXX-X~HMXXX'
   + Returns JSON object `{"Notices":[null,{"date":"dd-mm-yyyy","title":"XYZ","link_id":"dummyLink.php","id":"BXXX-X~HMXXX"}]}`
-  + `null` in the above JSON object is a known issue and will be fixed soon.
+  + **`null` in the above JSON object is a known issue and will be fixed soon.**
   
 ### 8. course_notice_data
 * ##### Returns the course notice data.
