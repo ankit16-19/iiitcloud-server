@@ -10,7 +10,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
   + > Form Data
     + 'uid':'userID'
     + 'pwd :'pass@123'
-   + Returns JSON object `{"return":"success"}` on successful authentication and `{"return":"failed"}` otherwise.  
+   + Returns JSON object **`{"return":"success"}` on successful authentication and `{"return":"failed"}`** otherwise.  
   
 ### 2. login
 * ##### Returns 50 most recent notices.
@@ -19,7 +19,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
   + > Form Data
     + 'uid':'userID'
     + 'pwd :'pass@123'
-  + Returns JSON object `{"Notices":[{"date":"dd-mm-yyyy","title":"Lorem Ipsum","id":"0000","id_link":"dummyLink.php","posted_by":"XYZ","attention":"XYZ"} , ....49 }]}`
+  + Returns JSON object **`{"Notices":[{"date":"dd-mm-yyyy","title":"Lorem Ipsum","id":"0000","id_link":"dummyLink.php","posted_by":"XYZ","attention":"XYZ"} , ....49 }]}`**
 
 ### 3. notice_data
 * ##### Returns notice data in HTML format.
@@ -29,7 +29,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
     + 'uid':'userID'
     + 'pwd :'pass@123'
     + 'id':0000
-  + Returns JSON object `{"Notices":[{"notice_data":".....html content......"}]}`
+  + Returns JSON object **`{"Notices":[{"notice_data":".....html content......"}]}`**
 
 ### 4. mycourse
 * ##### Returns user's course list.
@@ -38,7 +38,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
   + > Form Data
     + 'uid':'userID'
     + 'pwd :'pass@123'
-  + Returns JSON object `{"Notices":[{"semester":"BXXX-Y","id":"BXXX-Y~EEXXX","name":"XYZ","link":"dummyLink.php","professor":"XYZ","status":"C","credits":"X.00"},....}]}`
+  + Returns JSON object **`{"Notices":[{"semester":"BXXX-Y","id":"BXXX-Y~EEXXX","name":"XYZ","link":"dummyLink.php","professor":"XYZ","status":"C","credits":"X.00"},....}]}`**
   
 ### 5. course_details
 * ##### Returns professor details.
@@ -48,7 +48,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
     + 'uid':'userID'
     + 'pwd':'pass@123'
     + 'id':'BXXX-X~EEXXX'
-  + Returns JSON object `{"Notices":[{"name":"XYZ","designation":"Asst. XYZ","qualifications":"XYZ in XYZ","contact":" Phone(Ext) :   Email : xyz@iiit-bh.ac.in"}]}`
+  + Returns JSON object **`{"Notices":[{"name":"XYZ","designation":"Asst. XYZ","qualifications":"XYZ in XYZ","contact":" Phone(Ext) :   Email : xyz@iiit-bh.ac.in"}]}`**
   
 ### 6. attendance
 * ##### Returns user attendance.
@@ -57,7 +57,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
   + > Form Data
     + 'uid':'userID'
     + 'pwd':'pass@123'
-  + Returns JSON object `{"Notices":[{"subcode":"BXXX-X~EEXXX","sub":"XYZ","name":"Mr. XYZ","attendance":"  X(   %)    X(   %)   X(   %)   X"},....}]}`
+  + Returns JSON object **`{"Notices":[{"subcode":"BXXX-X~EEXXX","sub":"XYZ","name":"Mr. XYZ","attendance":"  X(   %)    X(   %)   X(   %)   X"},....}]}`**
   
 ### 7. course_notice
 * ##### Returns the complete course notice board.
@@ -67,7 +67,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
     + 'uid':'userID'
     + 'pwd':'pass@123'
     + 'id':'BXXX-X~HMXXX'
-  + Returns JSON object `{"Notices":[null,{"date":"dd-mm-yyyy","title":"XYZ","link_id":"dummyLink.php","id":"BXXX-X~HMXXX"}]}`
+  + Returns JSON object **`{"Notices":[null,{"date":"dd-mm-yyyy","title":"XYZ","link_id":"dummyLink.php","id":"BXXX-X~HMXXX"}]}`**
   + **`null` in the above JSON object is a known issue and will be fixed soon.**
   
 ### 8. course_notice_data
@@ -79,7 +79,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
     + 'pwd':'pass@123'
     + 'link : 'dumyLink.php..'  // from #7
     + 'id':'BXXX-X~HMXXX'
-  + Returns JSON object `{"Notices":[{"heading":"XYZ","notice_data":"xyz xyz","date":"...content in html....."}]}`
+  + Returns JSON object **`{"Notices":[{"heading":"XYZ","notice_data":"xyz xyz","date":"...content in html....."}]}`**
   
   
   
@@ -90,4 +90,4 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
   + > Form Data
     + 'uid':'userID'
     + 'pwd':'pass@123'
-  + Returns JSON object `{"Notices":[{{"Notices":[{"html":".....html content......"}]}`
+  + Returns JSON object **`{"Notices":[{{"Notices":[{"html":".....html content......"}]}`**
