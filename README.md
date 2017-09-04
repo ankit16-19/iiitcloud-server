@@ -93,3 +93,4 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
   + Returns JSON object `{"Notices":[{{"Notices":[{"html":".....html content......"}]}
 
   
+written by: RAVI TEJA
