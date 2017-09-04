@@ -50,8 +50,8 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
     + 'id':'BXXX-X~EEXXX'
   + Returns JSON object `{"Notices":[{"name":"XYZ","designation":"Asst. XYZ","qualifications":"XYZ in XYZ","contact":" Phone(Ext) :   Email : xyz@iiit-bh.ac.in"}]}`
   
- ### 6. attendance
- * ##### Returns user attendance.
+### 6. attendance
+* ##### Returns user attendance.
   + > Request URL: http://139.59.23.157/api/hibi/attendence
   + > Request Method: POST
   + > Form Data
