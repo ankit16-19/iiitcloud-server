@@ -11,7 +11,7 @@ module.exports = function(post_data,cb)
                 //request option2
                 var option2 =
                 {
-                        url:'https://hib.iiit-bh.ac.in/Hibiscus/Guardian/stuAttList.php?stuid=' post_data.uid,
+                        url:'https://hib.iiit-bh.ac.in/Hibiscus/Guardian/stuAttList.php?stuid=' + post_data.uid,
                         headers:
                         {
                                 Cookie:cookie,
