@@ -53,9 +53,8 @@ module.exports = function(post_data,cb)
 
                                             
                                         }
-                                        else if(err){
-                                            console.log(err);
-                                            req()
+                                        else{
+                                         
                                         }
                                     });
                                          

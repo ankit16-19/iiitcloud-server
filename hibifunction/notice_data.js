@@ -51,7 +51,7 @@ module.exports = function(post_data,cb)
                                                 cb(data);
                                         }
                                         else{
-                                                req();
+                                               
                                 }
                         });
                 }

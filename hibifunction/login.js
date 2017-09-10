@@ -32,7 +32,7 @@ module.exports = function(post_data,callback)
     }
     else{
       console.log(error);
-      req()
+     
     }
 
   });

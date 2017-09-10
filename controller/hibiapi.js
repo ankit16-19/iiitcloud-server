@@ -9,7 +9,10 @@ const course_notice = require('../hibifunction/course_notice');
 const course_notice_data = require('../hibifunction/course_notice_data');
 const view_grades = require('../hibifunction/view_grades');
 const  fee = require('../hibifunction/fee');
-const library_books = require('../hibifunction/library_books')
+const library_books = require('../hibifunction/library_books');
+const ebooks = require('../hibifunction/ebooks');
+const ebook_data = require('../hibifunction/ebook_data');
+const student = require('../hibifunction/student')
 
 
 
@@ -84,6 +87,24 @@ app.post('/api/hibi/fee', function(req,res){
 
 app.post('/api/hibi/library_books', function(req,res){
     library_books(req.body,function(data){
+    res.json(data);
+  });
+});
+
+app.post('/api/hibi/ebooks', function(req,res){
+    ebooks(req.body,function(data){
+    res.json(data);
+  });
+});
+
+app.post('/api/hibi/ebook_data', function(req,res){
+    ebook_data(req.body,function(data){
+    res.json(data);
+  });
+});
+
+app.post('/api/hibi/student', function(req,res){
+    student(req.body,function(data){
     res.json(data);
   });
 });

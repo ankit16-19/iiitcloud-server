@@ -43,7 +43,7 @@ module.exports = function(post_data,callback)
     }
     if(error){
       console.log(error)
-      req();
+     
     }
   });
   }
