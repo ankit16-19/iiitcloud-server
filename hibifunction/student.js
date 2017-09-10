@@ -26,9 +26,11 @@ module.exports = function(post_data,cb)
                         {
                                 Notices : []
                         };
+                        var counter = 0
                         var $ = cheerio.load(html);
                         $('tr').filter(function ()
                         {
+                            if(counter>2){
                                 var id = $(this).find('td').eq(0).text();
                                 var name = $(this).find('td').eq(1).text();                      
                                 var link = 'https://hib.iiit-bh.ac.in/Hibiscus/Students/stucvDet.php?stuid=' + id
@@ -38,10 +40,11 @@ module.exports = function(post_data,cb)
                                            'name':name,
                                            'link':link     
                                 });
+                            }
+                            else{
+                                counter++;
+                            }
                         });
-                        delete data.Notices[0]
-                        delete data.Notices[1]
-                        delete data.Notices[2]
                         cb(data);
                 });
         });
