@@ -1,0 +1,22 @@
+{
+  "name": "hibiapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ankit choudhary",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.1",
+    "cheerio": "^0.22.0",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.10.4",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.11.0",
+    "request": "^2.81.0"
+  }
+}
