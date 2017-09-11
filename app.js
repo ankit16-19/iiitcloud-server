@@ -32,7 +32,7 @@ app.use(bodyparser.urlencoded({extended:true})); //for parsing application/x-www
 
 
 // constants
-var port = 3001 ; // port to listen
+var port = 8080 ; // port to listen
 
 console.log('listening at the port ' + port); // defining the port for listening
 // api routes
@@ -42,4 +42,3 @@ hibiapi(app); // hibiscus unofficial API
 
 //port to listen
 var server = app.listen(port,'0.0.0.0');
-server.timeout = 7000;

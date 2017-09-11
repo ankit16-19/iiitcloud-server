@@ -15,7 +15,7 @@ module.exports = function(post_data,cb)
                         headers:
                         {
                                 Cookie:cookie,
-                                'Referer':'https://hib.iiit-bh.ac.in/Hibiscus/Cms/cmsMenu.php?coid=' + post_data.id
+                                'Referer':'https://hib.iiit-bh.ac.in/Hibiscus/Cms/cmsMenu.php?coid='
                         }
                 }
                 request.post(option2,function(err,res,html)

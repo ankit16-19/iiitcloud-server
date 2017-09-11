@@ -23,7 +23,7 @@ module.exports = function(post_data,callback)
   }
   var req = function(){
       //making post request to login
-      request.post(option, function(error,response,body)
+  request.post(option, function(error,response,body)
   {
     if(!error){
           console.log(response.headers['set-cookie'])
