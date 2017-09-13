@@ -25,7 +25,7 @@ app.get('/', function(req,res){
   res.sendFile(__dirname + '/index.html');
 });
 //login test
-app.post('//login_test', function(req,res){
+app.post('/login_test', function(req,res){
   login_test(req.body,function(data){
   res.json(data);
   res.end()
