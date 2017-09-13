@@ -15,6 +15,7 @@ const ebook_data = require('../hibifunction/ebook_data');
 const student = require('../hibifunction/student');
 const sub_grades = require('../hibifunction/sub_grades')
 const complaint = require('../hibifunction/complaint')
+const moocs = require('../hibifunction/moocs')
 
 
 
@@ -119,6 +120,12 @@ app.post('/student', function(req,res){
 // complaint
 app.post('/complaint', function(req,res){
     complaint(req.body,function(data){
+    res.json(data);
+  });
+});
+//moocs
+app.get('/moocs', function(req,res){
+    moocs(function(data){
     res.json(data);
   });
 });
