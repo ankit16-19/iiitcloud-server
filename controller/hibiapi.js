@@ -14,6 +14,7 @@ const ebooks = require('../hibifunction/ebooks');
 const ebook_data = require('../hibifunction/ebook_data');
 const student = require('../hibifunction/student');
 const sub_grades = require('../hibifunction/sub_grades')
+const complaint = require('../hibifunction/complaint')
 
 
 
@@ -80,39 +81,44 @@ app.post('/api/hibi/view_grades', function(req,res){
   });
 });
 // sub_grades
-//view_grades
 app.post('/api/hibi/sub_grades', function(req,res){
     sub_grades(req.body,function(data){
     res.json(data);
   });
 });
-
+// fee
 app.post('/api/hibi/fee', function(req,res){
     fee(req.body,function(data){
     res.json(data);
   });
 });
-
+// library books
 app.post('/api/hibi/library_books', function(req,res){
     library_books(req.body,function(data){
     res.json(data);
   });
 });
-
+// ebooks
 app.post('/api/hibi/ebooks', function(req,res){
     ebooks(req.body,function(data){
     res.json(data);
   });
 });
-
+// ebook data
 app.post('/api/hibi/ebook_data', function(req,res){
     ebook_data(req.body,function(data){
     res.json(data);
   });
 });
-
+// student
 app.post('/api/hibi/student', function(req,res){
     student(req.body,function(data){
+    res.json(data);
+  });
+});
+// complaint
+app.post('/api/hibi/complaint', function(req,res){
+    complaint(req.body,function(data){
     res.json(data);
   });
 });

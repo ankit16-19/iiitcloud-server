@@ -1,9 +1,19 @@
 const request = require('request');
+var Cryptr = require('cryptr'),
+    cryptr = new Cryptr('myTotalySecretKey');
 
 
 
 module.exports = function(post_data,callback)
 {
+  var pass;
+
+  if(post_data.pass == 'encrypt'){
+    var  decryptedString = cryptr.decrypt(post_data.pwd);    
+    pass = decryptedString;
+  }else{
+    pass = post_data.pwd
+  }
   //request options
   var option =
   {
@@ -11,7 +21,7 @@ module.exports = function(post_data,callback)
           form:
           {
                   'uid':post_data.uid,
-                  'pwd':post_data.pwd,
+                  'pwd':pass,
                   'txtinput':3,
                   'sub':'Login'
           },
