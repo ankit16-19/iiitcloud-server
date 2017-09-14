@@ -40,4 +40,4 @@ hibiapi(app); // hibiscus unofficial API
 
 
 //port to listen
-var server = app.listen(port,'0.0.0.0');
+var server = app.listen(port,'127.0.0.1');

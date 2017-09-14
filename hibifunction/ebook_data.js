@@ -27,7 +27,7 @@ module.exports = function(post_data,cb)
                         };
                         var $ = cheerio.load(html);
                         var name = $('table table').find('td').eq(0).text();
-                        var link = $('table table').find('td a').attr('href');
+                        var link = 'http://placement.iiit-bh.ac.in/api/hibi/ebook_download?id='  + post_data.id;
                         var author = $('table table').find('td').eq(2).text();
                         var publiser = $('table table').find('td').eq(3).text();   
                         var description =$('table table').find('td').eq(4).text();                      

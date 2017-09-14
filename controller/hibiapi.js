@@ -119,7 +119,7 @@ app.get('/ebook_download', function(req,res){
     let fileStream = fs.createWriteStream('book.pdf');  
     request('http://172.16.1.60/ebooks/' + req.query.id + '.pdf')
     .pipe(fileStream)
-    .on('close', function(){res.sendFile('/home/rat/git_projects/iiitcloud-server/book.pdf')});
+    .on('close', function(){res.sendFile('/home/administrator/ankit/iiitcloud-server/book.pdf')});
 
 });
 // student
