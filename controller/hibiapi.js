@@ -1,3 +1,5 @@
+const request = require('request');
+const fs = require('fs');
 const bodyparser = require('body-parser');
 const login_test = require('../hibifunction/login_test');
 const notice = require('../hibifunction/notice');
@@ -13,9 +15,10 @@ const library_books = require('../hibifunction/library_books');
 const ebooks = require('../hibifunction/ebooks');
 const ebook_data = require('../hibifunction/ebook_data');
 const student = require('../hibifunction/student');
-const sub_grades = require('../hibifunction/sub_grades')
-const complaint = require('../hibifunction/complaint')
-const moocs = require('../hibifunction/moocs')
+const sub_grades = require('../hibifunction/sub_grades');
+const complaint = require('../hibifunction/complaint');
+const complaint_post = require('../hibifunction/complaint_post');
+const moocs = require('../hibifunction/moocs');
 
 
 
@@ -111,6 +114,14 @@ app.post('/ebook_data', function(req,res){
     res.json(data);
   });
 });
+// ebook data donwnload
+app.get('/ebook_download', function(req,res){
+    let fileStream = fs.createWriteStream('book.pdf');  
+    request('http://172.16.1.60/ebooks/' + req.query.id + '.pdf')
+    .pipe(fileStream)
+    .on('close', function(){res.sendFile('/home/rat/git_projects/iiitcloud-server/book.pdf')});
+
+});
 // student
 app.post('/student', function(req,res){
     student(req.body,function(data){
@@ -119,6 +130,12 @@ app.post('/student', function(req,res){
 });
 // complaint
 app.post('/complaint', function(req,res){
+    complaint(req.body,function(data){
+    res.json(data);
+  });
+});
+// complaint_post
+app.post('/complaint_post', function(req,res){
     complaint(req.body,function(data){
     res.json(data);
   });

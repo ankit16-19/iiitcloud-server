@@ -21,7 +21,7 @@ module.exports = function(post_data,cb)
                                             AVAIL_TIME:post_data.avail_time,
                                             CONTACTNO:post_data.contact,
                                             STATUS:'O                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                '
-                                        }
+                                        },
                                         headers:
                                         {
                                                 'Cookie':cookie,
@@ -41,9 +41,12 @@ module.exports = function(post_data,cb)
                                             {
                                                     Notices : []
                                             };
+                                            data.Notices.push({
+                                                result:'success'
+                                            })
                                             var $ = cheerio.load(html);
                                             
-                                           cb('posted');
+                                           cb(data);
 
                                             
                                         }
