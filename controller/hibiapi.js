@@ -136,7 +136,7 @@ app.post('/complaint', function(req,res){
 });
 // complaint_post
 app.post('/complaint_post', function(req,res){
-    complaint(req.body,function(data){
+    complaint_post(req.body,function(data){
     res.json(data);
   });
 });
