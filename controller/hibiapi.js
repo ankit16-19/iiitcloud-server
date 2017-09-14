@@ -116,7 +116,7 @@ app.post('/ebook_data', function(req,res){
 });
 // ebook data donwnload
 app.get('/ebook_download', function(req,res){
-    let fileStream = fs.createWriteStream('book.pdf');  
+    var fileStream = fs.createWriteStream('book.pdf');  
     request('http://172.16.1.60/ebooks/' + req.query.id + '.pdf')
     .pipe(fileStream)
     .on('close', function(){res.sendFile('/home/administrator/ankit/iiitcloud-server/book.pdf')});
