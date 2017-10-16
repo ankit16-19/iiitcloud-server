@@ -1,11 +1,11 @@
 # IIIT Cloud Server
 Written in **NodeJS**, this server scrapes the Mandaar (previously, Hibiscus) server and returns an JSON object depending upon the request. Simply put, this is an **unofficial API** for the Mandaar UMS.  
-This server is hosted on Digital Ocean for now and is accessible on the IP `139.59.23.157`.    
+This server is hosted in IIIT bhubaneswar and is accessible on the IP `14.139.198.171`.    
 
 # API Endpoints
 ### 1. login test
 * ##### Verifies user credentials.  
-  + > Request URL: http://139.59.23.157/api/hibi/login_test
+  + > Request URL: http://14.139.198.171/api/hibi/login_test
   + > Request Method: POST
   + > Form Data
     + 'uid':'userID'
@@ -14,7 +14,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
   
 ### 2. login
 * ##### Returns 50 most recent notices.
-  + > Request URL: http://139.59.23.157/api/hibi/notice
+  + > Request URL: http://14.139.198.171/api/hibi/notice
   + > Request Method: POST
   + > Form Data
     + 'uid':'userID'
@@ -23,7 +23,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
 
 ### 3. notice_data
 * ##### Returns notice data in HTML format.
-  + > Request URL: http://139.59.23.157/api/hibi/notice_data
+  + > Request URL: http://14.139.198.171/api/hibi/notice_data
   + > Request Method: POST
   + > Form Data
     + 'uid':'userID'
@@ -33,7 +33,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
 
 ### 4. mycourse
 * ##### Returns user's course list.
-  + > Request URL: http://139.59.23.157/api/hibi/mycourse
+  + > Request URL: http://14.139.198.171/api/hibi/mycourse
   + > Request Method: POST
   + > Form Data
     + 'uid':'userID'
@@ -42,7 +42,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
   
 ### 5. course_details
 * ##### Returns professor details.
-  + > Request URL: http://139.59.23.157/api/hibi/course_details
+  + > Request URL: http://14.139.198.171/api/hibi/course_details
   + > Request Method: POST
   + > Form Data
     + 'uid':'userID'
@@ -52,7 +52,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
   
 ### 6. attendance
 * ##### Returns user attendance.
-  + > Request URL: http://139.59.23.157/api/hibi/attendence
+  + > Request URL: http://14.139.198.171/api/hibi/attendence
   + > Request Method: POST
   + > Form Data
     + 'uid':'userID'
@@ -61,7 +61,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
   
 ### 7. course_notice
 * ##### Returns the complete course notice board.
-  + > Request URL: http://139.59.23.157/api/hibi/course_notice
+  + > Request URL: http://14.139.198.171/api/hibi/course_notice
   + > Request Method: POST
   + > Form Data
     + 'uid':'userID'
@@ -72,7 +72,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
   
 ### 8. course_notice_data
 * ##### Returns the course notice data.
-  + > Request URL: http://139.59.23.157/api/hibi/course_notice_data
+  + > Request URL: http://14.139.198.171/api/hibi/course_notice_data
   + > Request Method: POST
   + > Form Data
     + 'uid':'userID'
@@ -85,7 +85,7 @@ This server is hosted on Digital Ocean for now and is accessible on the IP `139.
   
 ### 9. view_grades
 * ##### Returns the Grades in HTML format.
-  + > Request URL: http://139.59.23.157/api/hibi/view_grades
+  + > Request URL: http://14.139.198.171/api/hibi/view_grades
   + > Request Method: POST
   + > Form Data
     + 'uid':'userID'
