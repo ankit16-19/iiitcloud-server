@@ -36,7 +36,6 @@ module.exports = function(post_data,callback)
   request.post(option, function(error,response,body)
   {
     if(!error){
-          console.log(response.headers['set-cookie'])
           var cookie = response.headers['set-cookie'][0].slice(0,36);
           callback(cookie);
     }

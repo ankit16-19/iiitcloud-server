@@ -31,6 +31,7 @@ app.get('/', function(req,res){
 //login test
 app.post('/login_test', function(req,res){
   login_test(req.body,function(data){
+console.log(req.body.uid+" " + req.headers['x-forwarded-for'] || req.connection.remoteAddress)
   res.json(data);
   res.end()
  });
@@ -38,6 +39,7 @@ app.post('/login_test', function(req,res){
 //NoticeBoard
 app.post('/notice', function(req,res){
   notice(req.body,function(data){
+console.log(req.body.uid +" "+req.headers['x-forwarded-for'] || req.connection.remoteAddress)
   res.json(data);
  });
 });
@@ -45,77 +47,96 @@ app.post('/notice', function(req,res){
 app.post('/notice_data', function(req,res){
   
     notice_data(req.body,function(data){
+   if(data){
+   console.log(req.body.uid+" " +req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
+   }
+   else{
+  console.log("Not Null")
+   res.end()
+}
   });
 });
 //mycourse
 app.post('/mycourse', function(req,res){
     mycourse(req.body,function(data){
+console.log(req.body.uid +" "+req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
   });
 });
 //course_details
 app.post('/course_details', function(req,res){
     course_details(req.body,function(data){
+console.log(req.body.uid+" " +req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
   });
 });
 //attendence
 app.post('/attendence', function(req,res){
     attendence(req.body,function(data){
+console.log(req.body.uid+" " +req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
   });
 });
 //course_noticeboard
 app.post('/course_notice', function(req,res){
     course_notice(req.body,function(data){
+console.log(req.body.uid +" "+req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
   });
 });
 //course_noticeboard_data
 app.post('/course_notice_data', function(req,res){
     course_notice_data(req.body,function(data){
+console.log(req.body.uid +" "+req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
   });
 });
 //view_grades
 app.post('/view_grades', function(req,res){
     view_grades(req.body,function(data){
+console.log(req.body.uid +" "+req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
   });
 });
 // sub_grades
 app.post('/sub_grades', function(req,res){
     sub_grades(req.body,function(data){
+console.log(req.body.uid +" "+req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
   });
 });
 // fee
 app.post('/fee', function(req,res){
     fee(req.body,function(data){
+console.log(req.body.id+" " +req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
   });
 });
 // library books
 app.post('/library_books', function(req,res){
     library_books(req.body,function(data){
+console.log(req.body.id +" "+req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
   });
 });
 // ebooks
 app.post('/ebooks', function(req,res){
     ebooks(req.body,function(data){
+console.log(req.body.id +" "+req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
   });
 });
 // ebook data
 app.post('/ebook_data', function(req,res){
     ebook_data(req.body,function(data){
+console.log(req.body.id +" "+req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
   });
 });
 // ebook data donwnload
 app.get('/ebook_download', function(req,res){
+
     var fileStream = fs.createWriteStream('book.pdf');  
     request('http://172.16.1.60/ebooks/' + req.query.id + '.pdf')
     .pipe(fileStream)
@@ -125,6 +146,7 @@ app.get('/ebook_download', function(req,res){
 // student
 app.post('/student', function(req,res){
     student(req.body,function(data){
+console.log(req.body.id +" "+req.headers['x-forwarded-for'] || req.connection.remoteAddress)
     res.json(data);
   });
 });

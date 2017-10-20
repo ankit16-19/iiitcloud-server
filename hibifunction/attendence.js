@@ -45,8 +45,7 @@ module.exports = function(post_data,cb)
 	                                    'attendance':attendance,
 	                            
 	                            });
-	                    });
-	                    console.log(i)
+	                    }); 
                         cb(data);
                 });
         });
