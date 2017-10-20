@@ -17,13 +17,13 @@ module.exports = function(post_data,cb)
                                                 'Referer':'https://hib.iiit-bh.ac.in/Hibiscus/Start/menu.php'
                                         }
                                 }
-                                console.log("pre request")
+                       
                                 var req = function()
                                 {
-                                    console.log("making request")
+                              
                                     request.post(option,function(err,res,html)
                                     {
-                                        console.log("post request")   
+                                    
                                         
                                         if(!err){
                                             var data =

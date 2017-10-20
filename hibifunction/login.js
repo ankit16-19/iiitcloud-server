@@ -1,6 +1,6 @@
 const request = require('request');
 var Cryptr = require('cryptr'),
-    cryptr = new Cryptr('yoursecretekey');
+    cryptr = new Cryptr('myTotalySecretKey');
 
 
 

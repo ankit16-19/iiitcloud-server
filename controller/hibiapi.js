@@ -92,6 +92,35 @@ console.log(req.body.uid +" "+req.headers['x-forwarded-for'] || req.connection.r
     res.json(data);
   });
 });
+// course_notice_attachment
+app.get('/cnb', function(req,res){
+  // 
+        //making post request to login
+        login(req.body,function(cookie)
+        {
+                //request option2
+                var option2 =
+                {
+                        url:'https://hib.iiit-bh.ac.in/Hibiscus/Pub/vwAtt.php?docdb=cmsnb&fld=ATT1&pk=DOCID&pkval=' + req.query.id,
+                        headers:
+                        {
+                                Cookie:cookie,
+                                'Referer':'https://hib.iiit-bh.ac.in/Hibiscus/Cms/cmsMenu.php?coid='
+                        }
+                }
+                var fileStream = fs.createWriteStream('cnotice.pdf');  
+                request(option2)
+                .pipe(fileStream)
+                .on('close', function(){res.sendFile('/home/administrator/ankit/iiitcloud-server/cnotice.pdf')});
+        });
+  // 
+
+    var fileStream = fs.createWriteStream('cnotice.pdf');  
+    request()
+    .pipe(fileStream)
+    .on('close', function(){res.sendFile('/home/administrator/ankit/iiitcloud-server/cnotice.pdf')});
+
+});
 //view_grades
 app.post('/view_grades', function(req,res){
     view_grades(req.body,function(data){
