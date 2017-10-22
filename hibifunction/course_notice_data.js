@@ -28,7 +28,7 @@ module.exports = function(post_data,cb)
                         var $ = cheerio.load(html);
                          $('a').filter(function(){
 		                        if($(this).attr('href')[1] = "."){
-		                        $(this).attr('href',"https://14.139.198.171/api/hibi/cnd/id=" + $(this).attr('href').slice(85))
+		                        $(this).attr('href',"https://14.139.198.171/api/hibi/cnd/id=" + $(this).attr('href').slice(53))
 		                        }
 		                })                        
                         var heading = $('table tr').eq(1).text();
