@@ -1,4 +1,4 @@
-const request = require('request');
+ const request = require('request');
 var Cryptr = require('cryptr'),
     cryptr = new Cryptr('myTotalySecretKey');
 
@@ -8,14 +8,13 @@ var Cryptr = require('cryptr'),
 module.exports = function(post_data,callback)
 {
   var pass;
-//console.log(post_data)
-  if(post_data.method == 'encrypted'){
+
+  if(post_data.method == 'decrypt'){
     var  decryptedString = cryptr.decrypt(post_data.pwd);    
     pass = decryptedString;
   }else{
     pass = post_data.pwd
   }
-console.log(post_data.uid, pass , "password")
   //request options
   var option =
   {

@@ -32,6 +32,7 @@ app.get('/', function(req,res){
 app.post('/login_test', function(req,res){
   login_test(req.body,function(data){
 console.log(req.body.uid+" " + req.headers['x-forwarded-for'] || req.connection.remoteAddress)
+console.log("login_test", data)
   res.json(data);
   res.end()
  });
@@ -96,7 +97,7 @@ console.log(req.body.uid +" "+req.headers['x-forwarded-for'] || req.connection.r
 app.get('/cnb', function(req,res){
   // 
         //making post request to login
-        login({req.body},function(cookie)
+        login(req.body,function(cookie)
         {
                 //request option2
                 var option2 =

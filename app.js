@@ -1,3 +1,4 @@
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 //modules
 const express = require('express');
 var app = express();
@@ -31,7 +32,7 @@ app.use(bodyparser.urlencoded({extended:true})); //for parsing application/x-www
 
 
 // constants
-var port = 8080 ; // port to listen
+var port = 1628 ; // port to listen
 
 console.log('listening at the port ' + port); // defining the port for listening
 // api routes

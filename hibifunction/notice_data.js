@@ -30,9 +30,11 @@ module.exports = function(post_data,cb)
                                                 var $ = cheerio.load(html);
                                                         
                                                 $('a').filter(function(){
-                                                        if($(this).attr('href')[1] = "."){
+
+                                                        if($(this).attr('href')[1] == "."){
                                                         $(this).attr('href',"https://hib.iiit-bh.ac.in/Hibiscus" + $(this).attr('href').slice(2))
                                                         }
+							
                                                 })
                                                
                                                
