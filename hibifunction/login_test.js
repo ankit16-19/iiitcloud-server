@@ -42,7 +42,7 @@ console.log(post_data.uid, pass , "password")
           var data = {};
           // console.log(response.headers)
           var location = response.headers['location']
-          if (location === './?client=iiit&mes=UserID_or_Password_or_A_Incorrect')
+          if (location === './?client=iiit&mes=UserID_or_Password_or_A_Incorrect' || location === './?client=iiit&mes=UserID_or_Password_Incorrect')
           {
             data.result = 'failed';
           }
